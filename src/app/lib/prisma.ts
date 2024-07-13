@@ -6,8 +6,8 @@ declare const globalThis: {
   prismaGlobal: PrismaClient;
 } & typeof global;
 
-const prisma = globalThis.prismaGlobal || prismaClient();
+const db = globalThis.prismaGlobal || prismaClient();
 
-export default prisma;
+export default db;
 
-if (process.env.NODE_ENV !== "production") globalThis.prismaGlobal = prisma;
+if (process.env.NODE_ENV !== "production") globalThis.prismaGlobal = db;
