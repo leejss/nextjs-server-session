@@ -12,6 +12,7 @@ export const insertUser = async (newUser: Prisma.UserCreateInput) => {
     return Result.fail(error as Error);
   }
 };
+
 export const selectUserByEmail = async (email: string) => {
   try {
     const user = await db.user.findUnique({

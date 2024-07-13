@@ -1,6 +1,7 @@
 import { Result } from "@/app/lib/helper";
 import { insertUser } from "@/app/lib/queries";
 import { userSchema } from "@/app/lib/schema";
+import { redirect } from "next/navigation";
 
 // Edge of computation
 export async function POST(request: Request) {
